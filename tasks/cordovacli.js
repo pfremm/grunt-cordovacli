@@ -234,7 +234,6 @@ module.exports = function (grunt) {
                 options.action = 'add';
                 tasks.push(function (cb){runPlatform(options,cb);});
             } else if (command === 'plugin' && options.plugins){
-                options.action = 'add';
                 tasks.push(function (cb){runPlugin(options,cb);});
             } else if (command === 'prepare' || command === 'compile' || command === 'build'){
                 tasks.push(function (cb){runCordova([command].concat(options.args), {cwd:options.path}, cb);});
